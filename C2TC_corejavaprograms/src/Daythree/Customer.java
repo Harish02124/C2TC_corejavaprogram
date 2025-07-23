@@ -1,21 +1,20 @@
 //Program to demonstrate Constructor 
-package com.tnsif.daythree.constructor;
+package Daythree;
 
 public class Customer {
 	 private String customerName;
 	 private int customerId;
 	 private String customerCity;
 	 
-	// Default Constructor
+	
 	public Customer() {
 		System.out.println("Default Constructor");
 	}
 	
-	//Parameterized Constructor
-	//use of this keyword
+	
 	public Customer(String customerName, int customerId, String customerCity) {
 		
-		this(); //calling default constructor
+		this(); 
 		
 		System.out.println("Parameterized Constructor");
 		this.customerName = customerName;
@@ -23,7 +22,7 @@ public class Customer {
 		this.customerCity = customerCity;
 	}
 	
-	//Getter and Setters
+
 	public String getCustomerName() {
 		return customerName;
 	}
