@@ -1,6 +1,6 @@
 package Assignment_4;
 
-class Kingfisher implements Airfare {
+public class Kingfisher implements Airfare {
     private int hours;
     private double costPerHour;
 
@@ -9,41 +9,33 @@ class Kingfisher implements Airfare {
         this.hours = 0;
         this.costPerHour = 0.0;
     }
-
     // Parameterized constructor
     public Kingfisher(int hours, double costPerHour) {
         this.hours = hours;
         this.costPerHour = costPerHour;
     }
-
-    // Getters and Setters
+    // Getters
     public int getHours() {
         return hours;
     }
-
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
-
     public double getCostPerHour() {
         return costPerHour;
     }
-
+    // Setters
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
     public void setCostPerHour(double costPerHour) {
         this.costPerHour = costPerHour;
     }
-
-    // Implement calculateAmount (define logic as needed)
+    // Implementation of methods
     @Override
     public double calculateAmount() {
-        // As example, same as AirIndia
-        return hours * costPerHour;
+        return hours * costPerHour * 4;
     }
-
-    // Implement display method
     @Override
     public void display() {
-        System.out.println("KingFisher: Hours = " + hours + ", Cost per Hour = " + costPerHour + ", Total Amount = " + calculateAmount());
+        System.out.printf("%.2f\n", calculateAmount());
     }
 }
 

@@ -1,14 +1,34 @@
 package Assignment_4;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        AirIndia ai = new AirIndia(3, 1500.0);
-        ai.display();
+        Scanner sc = new Scanner(System.in);
+        
+        int choice = sc.nextInt();
+        int hours = sc.nextInt();
+        double costPerHour = sc.nextDouble();
+        
+        Airfare flight;
+        
+        switch (choice) {
+            case 1:
+                flight = new AirIndia(hours, costPerHour);
+                break;
+            case 2:
+                flight = new Kingfisher(hours, costPerHour);
+                break;
+            case 3:
+                flight = new Indigo(hours, costPerHour);
+                break;
+            default:
+                System.out.println("Invalid choice");
+                sc.close();
+                return;
+        }
 
-        Indigo indigo = new Indigo(2, 2000.0);
-        indigo.display();
-
-        Kingfisher kf = new Kingfisher(4, 1200.0);
-        kf.display();
-    }
+        flight.display();
+        sc.close();
+    }
 }
