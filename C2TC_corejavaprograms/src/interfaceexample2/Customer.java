@@ -1,16 +1,33 @@
 package interfaceexample2;
 
+import java.util.Scanner;
+
 public class Customer {
-    public static void main(String[] args) {
-        Dmart cart1 = new FoodCart();
-        Dmart cart2 = new Trends();
+	    public static void main(String[] args) {
+	        
+	    	Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Customer visiting FoodCart:");
-        cart1.viewOffers();
-        cart1.buyProduct("Burger", 99.0);
+	        System.out.println("Welcome to Dmart!");
+	        System.out.println("Choose your shopping area:");
+	        System.out.println("1. Foodcourt");
+	        System.out.println("2. Trends");
 
-        System.out.println("\nCustomer visiting Trends:");
-        cart2.viewOffers();
-        cart2.buyProduct("T-Shirt",499.0);
-    }
+	        int choice = scanner.nextInt();
+	        Dmart dmart;
+
+	        switch (choice) {
+	            case 1:
+	                dmart = new FoodCart();
+	                break;
+	            case 2:
+	                dmart = new Trends();
+	                break;
+	            default:
+	                System.out.println("Invalid choice. Please try again.");
+	                return;
+	        }
+
+	        dmart.shopping();
+	        
+	    }
 }

@@ -1,14 +1,10 @@
 package interfaceexample2;
 
-public class Trends implements Dmart {
+class Trends implements Dmart {
     @Override
-    public void buyProduct(String productName, double price) {
-        System.out.println("Trends: You bought " + productName + " for ₹" + price);
+    public void shopping() {
+        System.out.println("Welcome to the trends");
     }
 
-    @Override
-    public void viewOffers() {
-        System.out.println("Trends Offers: Flat 40% off on fashion wear!");
-    }
+    
 }
-
