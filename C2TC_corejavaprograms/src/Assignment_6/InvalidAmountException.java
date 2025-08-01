@@ -6,4 +6,3 @@ public class InvalidAmountException extends Exception {
      super(message);
  }
 }
-
